@@ -8,8 +8,8 @@ module ForemanStaticLinks
 
     def static_links
       begin
-        yaml = YAML.load(File.read("/etc/foreman/foreman_static_links.yaml"))
-        @linklist = yaml[:links]
+        hash = YAML.load(File.read("/etc/foreman/foreman_static_links.yaml"))
+        @linklist = hash['links']
       rescue
         @linklist = [
           {
