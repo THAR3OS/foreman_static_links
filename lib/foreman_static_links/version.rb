@@ -1,3 +1,2 @@
 module ForemanStaticLinks
-  VERSION = '0.0.16'
-end
+  VERSION = '0.0.17777777
