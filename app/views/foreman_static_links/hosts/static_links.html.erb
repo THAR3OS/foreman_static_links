@@ -10,9 +10,11 @@
   <thead>
     <th><%= N_("Link") %></th>
   </thead>
-  <% @linklist.each do |onelink| %>
+  <% @linklist.each do |l| %>
     <tr>
-      <td><%= link_to(onelink['title'], onelink['url'], title: onelink['comment'], target: onelink['target']) %></td>
+      <td>
+        <a href="<%= l['url'] %>" title="<%= l['comment'] %>" target="<%= l['target'] %>"><%= l['title'] %></a>
+      </td>
     </tr>
   <% end %>
 </table>
