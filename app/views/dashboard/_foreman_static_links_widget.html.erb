@@ -1,2 +1,15 @@
 <h4 class="header ca"><%= _('Static Links') %></h4>
-<%= _('Widget content') %>
+
+<table class="<%= table_css_classes('table-condensed table-fixed') %>">
+  <thead>
+    <th><%= N_("Link") %></th>
+  </thead>
+  <% @linklist.each do |l| %>
+    <tr>
+      <td>
+        <a href="<%= l[:url] %>" title="<%= l[:description] %>" target="<%= l[:target] %>"><%= l[:title] %></a>
+      </td>
+    </tr>
+  <% end %>
+</table>
+

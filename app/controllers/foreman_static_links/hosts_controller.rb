@@ -13,10 +13,10 @@ module ForemanStaticLinks
       rescue
         @linklist = [
           {
-            :title => 'foreman_static_links is currently unconfigured',
+            :title       => 'foreman_static_links is currently unconfigured',
             :description => 'please see the README.',
-            :url => 'https://github.com/THAR3OS/foreman_static_links/',
-            target: '_blank'
+            :url         => 'https://github.com/THAR3OS/foreman_static_links/',
+            :target      => '_blank'
           },
         ]
       end
