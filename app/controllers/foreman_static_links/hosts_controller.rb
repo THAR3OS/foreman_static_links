@@ -8,7 +8,8 @@ module ForemanStaticLinks
 
     def static_links
       begin
-        @linklist = YAML.load(File.read("/etc/foreman/foreman_static_links.yaml"))
+        yaml = YAML.load(File.read("/etc/foreman/foreman_static_links.yaml"))
+        @linklist = yaml[:links]
       rescue
         @linklist = [
           {
@@ -16,12 +17,6 @@ module ForemanStaticLinks
             :description => 'please see the README.',
             :url => 'https://github.com/THAR3OS/foreman_static_links/',
             target: '_blank'
-          },
-          {
-            :title => '2 foreman_static_links is currently unconfigured',
-            :description => '2 please see the README.',
-            :url => 'https://github.com/THAR3OS/foreman_static_links/',
-            :target => '_blank'
           },
         ]
       end
