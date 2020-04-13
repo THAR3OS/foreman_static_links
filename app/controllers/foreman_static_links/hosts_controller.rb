@@ -1,11 +1,11 @@
 module ForemanStaticLinks
-  # Example: Plugin's HostsController inherits from Foreman's HostsController
-  class HostsController < ::HostsController
+  # Example: Plugin's MonitorController inherits from Foreman's HostsController
+  class HostsController < ::MonitorController
     # change layout if needed
     # layout 'foreman_static_links/layouts/new_layout'
 
-    def new_action
-      # automatically renders view/foreman_static_links/hosts/new_action
+    def static_links
+      # automatically renders view/foreman_static_links/monitor#static_links
     end
   end
 end

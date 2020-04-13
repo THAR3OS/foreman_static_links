@@ -20,7 +20,7 @@ module ForemanStaticLinks
 
         # Add permissions
         security_block :foreman_static_links do
-          permission :view_foreman_static_links, :'foreman_static_links/hosts' => [:new_action]
+          permission :view_foreman_static_links, :'foreman_static_links/monitor' => [:static_links]
         end
 
         # Add a new role called 'Discovery' if it doesn't exist
@@ -28,13 +28,13 @@ module ForemanStaticLinks
 
         # add menu entry
         menu :top_menu, :template,
-             url_hash: { controller: :'foreman_static_links/hosts', action: :new_action },
-             caption: 'ForemanStaticLinks',
-             parent: :hosts_menu,
-             after: :hosts
+             url_hash: { controller: :'foreman_static_links/monitor', action: :static_links },
+             caption: N_('Static Links'),
+             parent: :monitor_menu,
+             after: :dashboard
 
         # add dashboard widget
-        widget 'foreman_static_links_widget', name: N_('Foreman plugin template widget'), sizex: 4, sizey: 1
+        widget 'foreman_static_links_widget', name: N_('Static Links'), sizex: 4, sizey: 1
       end
     end
 
