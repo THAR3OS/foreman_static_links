@@ -17,6 +17,12 @@ module ForemanStaticLinks
             url: 'https://github.com/THAR3OS/foreman_static_links/',
             target: '_blank'
           },
+          {
+            title: '2 foreman_static_links is currently unconfigured',
+            description: '2 please see the README.',
+            url: 'https://github.com/THAR3OS/foreman_static_links/',
+            target: '_blank'
+          },
         ]
       end
     end
