@@ -10,7 +10,7 @@
   <thead>
     <th><%= N_("Link") %></th>
   </thead>
-  <% @linklist.each do |l| %>
+  <% @linklist.each do |cnt, l| %>
     <tr>
       <td>
         <a href="<%= l['url'] %>" title="<%= l['comment'] %>" target="<%= l['target'] %>"><%= l['title'] %></a>
