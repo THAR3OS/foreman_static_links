@@ -1,3 +1,3 @@
 module ForemanStaticLinks
-  VERSION = '0.0.22.freeze
+  VERSION = '0.0.2.freeze'
 end
