@@ -4,14 +4,11 @@
   <thead>
     <th><%= N_("Link") %></th>
   </thead>
-  <% if defined(@linlist) %>
-  <% @linklist.each do |l| %>
+  <% if defined(@linklist) %>
     <tr>
       <td>
-        <a href="<%= l[:url] %>" title="<%= l[:description] %>" target="<%= l[:target] %>"><%= l[:title] %></a>
+        @linklist is defined
       </td>
     </tr>
   <% end %>
-  <% end %>
 </table>
-
