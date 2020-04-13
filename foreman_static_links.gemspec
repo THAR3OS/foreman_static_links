@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.license     = 'GPL-3.0'
   s.authors     = ['Stephan Seitz']
   s.email       = ['s.seitz@bnotk.de']
-  s.homepage    = 'https://github.com:THAR3OS/foreman_static_links'
+  s.homepage    = 'https://github.com/THAR3OS/foreman_static_links'
   s.summary     = 'Foreman Plugin to provide a widget with related static links.'
   # also update locale/gemspec.rb
   s.description = 'Foreman Plugin to provide a widget with related static links.'
