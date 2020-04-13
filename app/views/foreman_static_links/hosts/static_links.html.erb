@@ -9,11 +9,10 @@
 <table class="<%= table_css_classes('table-condensed table-fixed') %>">
   <thead>
     <th><%= N_("Link") %></th>
-    <th/>
   </thead>
-  <% @links.each do |link| %>
+  <% @linklist.each do |onelink| %>
     <tr>
-      <td><!-- link_to link['title'], link['url'], title: target['comment'], target: link['target'] -->Test</td>
+      <td><%= link_to(onelink['title'], onelink['url'], title: onelink['comment'], target: onelink['target']) %></td>
     </tr>
   <% end %>
 </table>
