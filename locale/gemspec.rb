@@ -1,2 +1,2 @@
 # Matches foreman_static_links.gemspec
-_('TODO: Description of ForemanStaticLinks.')
+_('Foreman Plugin to provide a widget with static links to related projects.')
