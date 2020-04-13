@@ -20,7 +20,7 @@ module ForemanStaticLinks
 
         # Add permissions
         security_block :foreman_static_links do
-          permission :view_foreman_static_links, :'foreman_static_links/monitor' => [:static_links]
+          permission :view_foreman_static_links, :'foreman_static_links/hosts' => [:static_links]
         end
 
         # Add a new role called 'Discovery' if it doesn't exist
@@ -28,7 +28,7 @@ module ForemanStaticLinks
 
         # add menu entry
         menu :top_menu, :template,
-             url_hash: { controller: :'foreman_static_links/monitor', action: :static_links },
+             url_hash: { controller: :'foreman_static_links/hosts', action: :static_links },
              caption: N_('Static Links'),
              parent: :monitor_menu,
              after: :dashboard
