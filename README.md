@@ -15,7 +15,6 @@ After installation, you'll get a new 'Static Links' page (linked below Monitor/D
 
 Additionally, the same content can also be placed as 'Static Links' widget  on the dashboard.
 
-
 * On RHEL, the installation is done as: *
 ```
 gem build foreman_static_links.gemspec
@@ -31,26 +30,25 @@ systemctl restart httpd
 The main motivation for writing this plugin was learning how to write ruby utilizing the foreman rails infrastructure.
 Having a link list is also convenient in our infrastructure to get quick links to puppetboard, git, monitoring, ...
 
-
 ## Configuration
 
 * Add a file /etc/foreman/foreman_static_links.yaml with following structure:
 ```
 ---
 links:
-  -
-    :url: 'https://one.target.link/you/want'
-    :description: 'some description that will show as mouse-over'
-    :title: 'The visible Link Text'
-    :target: '_blank'
-  -
-    :url: 'https://some.other.link/you/also/want'
-    :description: 'important note'
-    :title: 'Another important link'
-    :target: '_blank'
+  topic1:
+    url: 'https://one.target.link/you/want'
+    description: 'some description that will show as mouse-over'
+    title: 'The visible Link Text'
+    target: '_blank'
+  topic2:
+    url: 'https://some.other.link/you/also/want'
+    description: 'important note'
+    title: 'Another important link'
+    target: '_blank'
 ```
 
-In tech-speak: The 'links'-hash contains an array of hashes which each contains the hash-keys :url, :description, :title and :target.
+In tech-speak: The 'links'-hash contains an nested where each iteration contains the hash-keys url, description, title and target.
 
 ## TODO
 
